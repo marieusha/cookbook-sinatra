@@ -1,0 +1,17 @@
+<h1>Add your new <em>kickass</em> recipe</h1>
+
+<form action="/recipes" method="post">
+  Recipe name:<br>
+  <input type="text" name="name" value="<%= @name %>"><br>
+  <br>Description:<br>
+  <textarea name="description" value="<%= @description %> rows="4" cols="50">
+  </textarea><br>
+
+  Prep time:<br>
+  <input type="text" name="preptime" value="<%= @preptime %>"><br>
+
+  Difficulty (a number 1 <em>very easy</em> to 4 <em>difficult</em>):<br>
+  <input type="text" name="difficulty" value="<%= @difficulty %>"><br>
+
+ <br> <input type="submit" value="Submit">
+</form>

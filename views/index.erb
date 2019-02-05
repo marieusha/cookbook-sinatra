@@ -1,0 +1,22 @@
+<h1>The big and bad <em>cookbook</em>!</h1>
+
+<br>
+<h2>All the latest recipes</h2>
+<div>
+<ul>
+  <% @recipes.each_with_index do |recipe, index| %>
+    <li>
+      <strong><%= recipe.name %></strong>
+      <br>
+      <%= recipe.description %>
+      <br><a href="/delete/<%=index%>" class="btn-xs btn-danger">Delete</a><br>
+    </li><br>
+  <% end %>
+</ul>
+
+</div>
+
+<br><a href="/new" class="btn btn-primary">Add a new recipe</a><br>
+
+<br><%= Time.now %>
+
